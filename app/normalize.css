@@ -10,7 +10,7 @@
  */
 
 html {
-  line-height: 1.15; /* 1 */
+  /*line-height: 1.15; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -36,10 +36,10 @@ section {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1 {
+/*h1 {
   font-size: 2em;
   margin: 0.67em 0;
-}
+}*/
 
 /* Grouping content
    ========================================================================== */
@@ -160,7 +160,7 @@ mark {
  */
 
 small {
-  font-size: 80%;
+  font-size: 0.7rem;
 }
 
 /**
