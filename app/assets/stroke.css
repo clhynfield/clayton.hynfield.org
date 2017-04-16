@@ -1,21 +1,42 @@
-path {
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-  animation: dash 1s linear forwards;
-}
-
-#STROKE_4F0201BB-8BC7-44C8-92B2-ADD1066A1502 {
-  animation-delay: 0s;
-}
-#STROKE_3FA65B50-1E42-4C19-BE89-A93CAC7C684A {
-  animation-delay: 1s;
-}
-#STROKE_7A9A0DED-7827-4434-89D9-02D2CADEA39A {
-  animation-delay: 2s;
-}
-
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
   }
+}
+
+path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 0.5s linear forwards;
+}
+
+#stroke-0 {
+  animation-delay: 0.0s;
+}
+#stroke-1 {
+  animation-delay: 0.1s;
+}
+#stroke-2 {
+  animation-delay: 0.2s;
+}
+#stroke-3 {
+  animation-delay: 0.3s;
+}
+#stroke-4 {
+  animation-delay: 0.4s;
+}
+#stroke-5 {
+  animation-delay: 0.5s;
+}
+#stroke-6 {
+  animation-delay: 0.6s;
+}
+#stroke-7 {
+  animation-delay: 0.7s;
+}
+#stroke-8 {
+  animation-delay: 0.8s;
+}
+#stroke-9 {
+  animation-delay: 0.9s;
 }
