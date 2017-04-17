@@ -23,33 +23,33 @@ path:not(:nth-last-child(2), :last-child) {
     fade 5s 1 2s ease-in forwards;
 }
 
-#stroke-0 {
+path:nth-child(1) {
   animation-delay: 0.0s;
 }
-#stroke-1 {
+path:nth-child(2) {
   animation-delay: 0.2s;
 }
-#stroke-2 {
+path:nth-child(3) {
   animation-delay: 0.4s;
 }
-#stroke-3 {
+path:nth-child(4) {
   animation-delay: 0.6s;
 }
-#stroke-4 {
+path:nth-child(5) {
   animation-delay: 0.8s;
 }
-#stroke-5 {
+path:nth-child(6) {
   animation-delay: 1.0s;
 }
-#stroke-6 {
+path:nth-child(7) {
   animation-delay: 1.2s;
 }
-#stroke-7 {
+path:nth-child(8) {
   animation-delay: 1.4s;
 }
-#stroke-8 {
+path:nth-child(9) {
   animation-delay: 1.6s;
 }
-#stroke-9 {
+path:nth-child(10) {
   animation-delay: 1.8s;
 }
