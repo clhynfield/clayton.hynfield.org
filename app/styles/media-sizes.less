@@ -1,0 +1,18 @@
+@default-page-width: 46.5rem;
+@default-page-height: 28.5rem;
+@dev-page-color: fadeout(@black, 85%);
+
+.page(@page-width: @default-page-width;
+      @page-height: @default-page-height) {
+  background-color: @dev-page-color;
+  width: 100%;
+  min-height: @page-height;
+}
+
+body>section, body>main>section {
+  .page()
+}
+
+body>header, body>footer {
+  .page(@page-height: 7.5rem)
+}

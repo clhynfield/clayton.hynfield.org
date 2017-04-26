@@ -1,0 +1,80 @@
+/*
+[The Vignelli Canon](http://www.vignelli.com/canon.pdf)
+Part Two
+The Tangibles
+
+Paper Sizes
+Grids, Margins, Columns and Modules
+A Company Letterhead
+Grids for Books
+Typefaces, The Basic Ones
+Flush left, centered, justifed
+Type Size Relationships
+Rulers
+Contrasting Type Sizes
+Scale
+Texture
+Color
+Layouts
+Sequence
+Binding
+Indentity and Diversity
+White Space
+A collection of experiences
+Conclusion
+*/
+
+@dev: true;
+
+@import "media-sizes";
+@import "typefaces";
+@import "type-sizes";
+@import "color";
+@import "layouts/three-qualities";
+
+@black: #253043;
+
+
+/*
+* DEBUG
+*/
+
+@gridline-color: fadeout(@black, 50%);
+
+body {
+  background-position: 18px 12px;
+  background-size: 1.5rem 1.5rem;
+  background-image:
+    linear-gradient(
+      0deg,
+      transparent 24%,
+      @gridline-color 25%,
+      @gridline-color 26%,
+      transparent 27%,
+      transparent 74%,
+      @gridline-color 75%,
+      @gridline-color 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(90deg,
+      transparent 24%,
+      @gridline-color 25%,
+      @gridline-color 26%,
+      transparent 27%,
+      transparent 74%,
+      @gridline-color 75%,
+      @gridline-color 76%,
+      transparent 77%,
+      transparent
+    );
+}
+
+/*
+ * LEADING
+ */
+
+
+body>*>h1 {
+  text-align: center;
+}

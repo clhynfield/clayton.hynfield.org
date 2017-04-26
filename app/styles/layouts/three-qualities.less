@@ -1,0 +1,27 @@
+section.three-qualities {
+  height: 30rem;
+}
+section.three-qualities>* {
+  margin: 0 auto;
+  width: 46.5rem;
+}
+section.three-qualities>*>* {
+  float: left;
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  margin: 0 1.5rem;
+}
+section.three-qualities>*>:first-of-type {
+  width: 14.5rem;
+  height: 9rem;
+}
+section.three-qualities>*>:nth-of-type(2) {
+  width: 30.5rem;
+  height: 9rem;
+}
