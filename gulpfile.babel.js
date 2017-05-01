@@ -8,10 +8,10 @@ const $ = require('gulp-load-plugins')();
 var dev = true;
 
 gulp.task('styles', () => {
-  return gulp.src('app/styles/*.{css|less}')
-    .pipe($.if(/\.less$/, $.less()))
+  return gulp.src('app/styles/**/*.@(css|less)')
+    .pipe($.if(dev === false && /\.less$/, $.less()))
     .pipe($.if(dev, $.sourcemaps.init()))
-    .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
+    .pipe($.if(dev === false, $.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']})))
     .pipe($.if(dev, $.sourcemaps.write()))
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
@@ -103,7 +103,7 @@ gulp.task('serve', () => {
       '.tmp/fonts/**/*'
     ]).on('change', reload);
 
-    gulp.watch('app/styles/**/*.{css,less}', ['styles']);
+    gulp.watch('app/styles/**/*.@(css|less)', ['styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/fonts/**/*', ['fonts']);
   });
