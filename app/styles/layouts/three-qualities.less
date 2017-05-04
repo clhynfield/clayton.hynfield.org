@@ -1,15 +1,14 @@
+@import "../main";
+@import "../media-sizes";
+@import "../color";
+
 section.three-qualities {
-  height: 30rem;
-  &:before,
-  &:after {
-    content: "";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
+  .page(@background: @black);
+  padding: 3rem 0;
+  color: @tone60;
   &>h2 { display: none; }
 }
+
 section.three-qualities>* {
   margin: 0 auto;
   width: 48rem;
@@ -24,6 +23,7 @@ section.three-qualities>* {
     font-weight: 100;
   }
 }
+
 section.three-qualities>*>* {
   float: left;
   &:before,
@@ -36,11 +36,15 @@ section.three-qualities>*>* {
   }
   margin: 0rem 0.75rem 1.5rem 0.75rem;
   padding: 0 0;
+}
+
+section.three-qualities>*>* when (@dev) {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url('../images/rectangle.svg');
   overflow: hidden;
 }
+
 section.three-qualities>*>:first-child {
   margin-left: 0;
   width: 15rem;
