@@ -12,13 +12,33 @@ lines(3, 6) => 30
 lines(2, 9) => 28.5
 lines(1, 19) => 28.5
 */
+@import "media-sizes";
 @import "color";
-@dev-module-color: fadeout(@blue, 85%);
 
-.grid(@columns: 3; @modules: 3) {
-  height: ;
-  width: ;
-  float: left;
+@dev-module-color: fadeout(@blue, 85%);
+@default-grid-count: 3;
+@default-grid-height: 9rem;
+@default-grid-width: 48rem;
+@default-module-count: 3;
+
+.grid(@count: @default-grid-count;
+      @span: 1;
+      @width: @default-grid-width;
+      @height: @default-grid-height;) {
+  margin: 0 auto 1.5rem auto;
+  width: @width;
+  height: @height;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
 }
 
 .module() {
